@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #7c3aed;
+  --primary-dark: #6d28d9;
+  --secondary: #f59e0b;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --bg-light: #f9fafb;
+  --bg-dark: #111827;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-violet-600 hover:bg-violet-700 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-6 rounded-md transition-all duration-300 shadow-sm;
+  }
+  
+  .btn-outline {
+    @apply border border-violet-600 text-violet-600 hover:bg-violet-50 font-medium py-2 px-6 rounded-md transition-all duration-300;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg;
+  }
+
+  .event-card {
+    @apply card hover:translate-y-[-5px];
+  }
+}
